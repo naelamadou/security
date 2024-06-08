@@ -12,14 +12,22 @@ public class UserMapper {
 	public static List<UserDto> listUserEntityToListUserDto(List<UserEntity> users){
 		
 		return users.stream()
-				.map(user -> 
-toUserDto(user))
+				.map(user ->toUserDto(user))
 				.collect(Collectors.toList());
 	}
 	
-	private static UserDto toUserDto(UserEntity user) {
+	
+	
+	
+	public static UserDto toUserDto(UserEntity user) {
 		
-		return new UserDto(user.getId(), user.getFirstName(),user.getLastName(),user.getEmail());
+		return new UserDto(user.getId(), user.getFirstName(),user.getLastName(),user.getEmail(),user.getPassword());
 	}
-
+	
+	
+	public static UserEntity ToUserEntity(UserDto user){
+		
+		return new UserEntity(user.getId(), user.getFirstName(),user.getLastName(),user.getEmail(),user.getPassword());
+	}
+	
 }
