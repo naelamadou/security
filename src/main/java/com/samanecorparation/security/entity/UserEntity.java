@@ -1,5 +1,7 @@
 package com.samanecorparation.security.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class UserEntity {
+public class UserEntity implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +22,13 @@ public class UserEntity {
 	private String lastName;
 	@Column(name= "email" , length = 200, nullable = false, unique = true)
 	private String email;
+	@Column(name= "password" , nullable = false)
+	private String password;
 	
 	
+	public UserEntity() {
+		super();
+	}
 	public UserEntity(int id, String firstName, String lastName, String email) {
 		super();
 		this.id = id;
@@ -52,6 +59,12 @@ public class UserEntity {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 

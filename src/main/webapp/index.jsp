@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Slide Navbar</title>
+	<title>Accueil</title>
 	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
 	<link href="public/css/style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 					<input type="email" name="email" placeholder="Email" required="">
           <input type="number" name="broj" placeholder="BrojTelefona" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
-					<button>Sign up</button>
+					<button>S'inscrire</button>
 				</form>
 			</div>
 
